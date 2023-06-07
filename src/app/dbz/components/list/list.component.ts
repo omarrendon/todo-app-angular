@@ -1,8 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Tasks } from '../../interfaces/task.interface';
 
 @Component({
   selector: 'app-dbz-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
-export class ListComponent {}
+export class ListComponent {
+  @Input()
+  public tasksList: Tasks[] = [
+    {
+      name: 'cook',
+      priority: 8,
+    },
+  ];
+}
