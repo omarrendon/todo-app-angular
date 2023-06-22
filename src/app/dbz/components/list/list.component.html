@@ -10,6 +10,6 @@
       <strong> Priority: </strong>
       <span>{{ item.priority }}</span>
     </div>
-    <button (click)="onDeleteTask(i)" class="btn btn-danger">X</button>
+    <button (click)="onDeleteTask(item.id!)" class="btn btn-danger">X</button>
   </li>
 </ul>

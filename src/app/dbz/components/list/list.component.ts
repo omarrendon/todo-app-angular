@@ -14,11 +14,11 @@ export class ListComponent {
       priority: 8,
     },
   ];
-  @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
 
-  onDeleteTask(index: number): void {
-    console.log({ index });
-    this.onDelete.emit(index);
+  @Output()
+  public onDelete: EventEmitter<string> = new EventEmitter();
+
+  onDeleteTask(id: string): void {
+    this.onDelete.emit(id);
   }
 }
