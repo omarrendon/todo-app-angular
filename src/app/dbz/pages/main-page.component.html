@@ -3,10 +3,11 @@
 
 <div class="row">
   <div class="col">
-    <app-dbz-list [tasksList]="tasks"></app-dbz-list>
+    <app-dbz-list [tasksList]="tasks" (onDelete)="onDeleteTask($event)">
+    </app-dbz-list>
   </div>
 
   <div class="col">
-    <app-dbz-add-task></app-dbz-add-task>
+    <app-dbz-add-task (onNewTask)="onNewTask($event)"></app-dbz-add-task>
   </div>
 </div>

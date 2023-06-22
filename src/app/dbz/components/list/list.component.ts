@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Tasks } from '../../interfaces/task.interface';
 
 @Component({
@@ -14,4 +14,11 @@ export class ListComponent {
       priority: 8,
     },
   ];
+  @Output()
+  public onDelete: EventEmitter<number> = new EventEmitter();
+
+  onDeleteTask(index: number): void {
+    console.log({ index });
+    this.onDelete.emit(index);
+  }
 }

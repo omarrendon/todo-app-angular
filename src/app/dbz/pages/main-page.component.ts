@@ -21,5 +21,14 @@ export class MainPageComponent {
     },
   ];
 
+  onNewTask(task: Tasks): void {
+    console.log('New task added', task);
+    this.tasks.push(task);
+  }
+
+  onDeleteTask(index: number): void {
+    this.tasks.splice(index, 1);
+  }
+
   constructor() {}
 }
